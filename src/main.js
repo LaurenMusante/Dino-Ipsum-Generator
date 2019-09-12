@@ -12,7 +12,7 @@ $(document).ready(function() {
     let dinoMaker = new DinoMaker(); //imported from dino.js. Has the method getDinoName() defined within it.
     let name; //to create a variable where we will eventually store the dino's name for later use.
 
-    let namePromise = dinoMaker.getDinoName();
+    let namePromise = dinoMaker.getDinoName();  // will return new instance of Promise object
     namePromise.then(function(response) {
       const dinoName = JSON.parse(response); // main nameless array in Postman
       name = dinoName[0][0]; //access the main array at index 0 and the subarray at index 0. 00 since we are only grabbing one word from one paragraph
